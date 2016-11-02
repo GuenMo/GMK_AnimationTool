@@ -62,7 +62,5 @@ def main():
     win = MainWindow()
     win.show()
 
-main()
-
 
         
