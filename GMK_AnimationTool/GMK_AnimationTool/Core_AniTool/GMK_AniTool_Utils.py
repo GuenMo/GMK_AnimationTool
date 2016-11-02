@@ -6,10 +6,16 @@ import pymel.core as pm
 import maya.cmds as cmds
 
 # PySide module
-from PySide.QtCore import * 
-from PySide.QtGui import *
-from shiboken import wrapInstance
-
+try:
+    from PySide.QtGui import *
+    from PySide.QtCore import *
+    from shiboken import wrapInstance
+except:
+    from PySide2.QtGui import *
+    from PySide2.QtCore import *
+    from PySide2.QtWidgets import *
+    from shiboken2 import wrapInstance
+    
 # Python module
 import collections
 from datetime import datetime

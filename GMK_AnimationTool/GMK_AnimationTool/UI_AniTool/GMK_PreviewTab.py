@@ -1,6 +1,16 @@
 # -*- coding:utf-8 -*-
-from PySide.QtCore import * 
-from PySide.QtGui import *
+try:
+    import PySide
+    from PySide.QtGui import *
+    from PySide.QtCore import *
+    from shiboken import wrapInstance
+except:
+    import PySide2
+    from PySide2.QtGui import *
+    from PySide2.QtCore import *
+    from PySide2.QtWidgets import *
+    from shiboken2 import wrapInstance
+    
 import os
 import subprocess
 
